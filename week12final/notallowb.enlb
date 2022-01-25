@@ -1,0 +1,7 @@
+# Missing necessary element before b-times
+# It will show the error in polishlist, which is in set function
+BEGIN {
+    SET $A := 5 B-TIMES ;
+    PRINT "$A:"
+    PRINT $A
+}

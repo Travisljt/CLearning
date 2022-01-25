@@ -1,0 +1,11 @@
+# Because I is a 1x1 scale, therefore it should become an 4x4 array
+BEGIN {
+    ONES 4 4 $A
+    SET $A := $A 2 B-ADD ;
+    LOOP $I 3 {
+    SET $B := $A $I B-EQUALS ; 
+     
+    PRINT "$B:"
+    PRINT $B 
+    }
+}

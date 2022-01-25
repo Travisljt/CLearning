@@ -1,0 +1,7 @@
+BEGIN {
+   READ "lblock.arr" $A 
+   READ "laround.arr" $B
+   SET $C := $A $B B-OR ; 
+   PRINT "ARRAY:"  
+   PRINT $C
+}

@@ -1,0 +1,116 @@
+Before start to scan the .nlb file, I have add a test function at the begin 
+It could test each unit function I have used (except void function)
+When everything go well, the code should start to parse and interp the code
+
+
+Use black box testing:
+
+In makefile (which is learnd from teacher's), enter comment 'make runtest'
+In addition to the few .nlb files given by neill, I also gave several additional .nlb files for testing
+
+In several .nlb files given by neill, I tested the create function (including ONES and READ), 
+the Print function, the B-TIMES, B-ADD and other functions in the Set function and the Loop function
+
+In createprinta.nlb, adds two arrays created by create function. The result should be :
+ARRAY:
+1 1 1 1 
+1 2 2 1 
+1 2 2 1 
+1 1 1 1
+
+In createprintb.nlb, let two arrays OR created by create function. The result should be :
+ARRAY:
+1 1 1 1 
+1 1 1 1 
+1 1 1 1 
+1 1 1 1 
+
+In commentinside.nlb, use '#' as a comment sign, and the words after '#' it shouldn't be included in nlab
+The result is same as run the lifeb3s23.nlb
+
+In equalsprint.nlb, the loop uses the equals function to operate on the array A and the variable I
+Because I is a 1x1 scale, so that it should be enlarge the same size to the A array
+The result should be:
+$B:
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+$B:
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+$B:
+1 1 1 1 
+1 1 1 1 
+1 1 1 1 
+1 1 1 1 
+
+In lessandgreaterprint.nlb, perform greater, less and and operations on multiple variables at the same time
+The result should be ：
+$A:
+1 1 1 
+1 1 1 
+1 1 1 
+$B:
+4 4 4 
+4 4 4 
+4 4 4 
+$C:
+0 0 0 
+0 0 0 
+0 0 0 
+$D:
+1 1 1 
+1 1 1 
+1 1 1 
+$E:
+0 0 0 
+0 0 0 
+0 0 0 
+
+In lifereadlblock.nlb, it just change the .arr file in the lifeb3s23, and the result should remain the same array
+
+In lifereadltoad.nlb, it just change the .arr file in the lifeb3s23 as well, 
+and the result should iteratively transform between two arrays:
+1 
+0 0 0 0 0 0 
+0 0 0 1 0 0 
+0 1 0 0 1 0 
+0 1 0 0 1 0 
+0 0 1 0 0 0 
+0 0 0 0 0 0 
+2 
+0 0 0 0 0 0 
+0 0 0 0 0 0 
+0 0 1 1 1 0 
+0 1 1 1 0 0 
+0 0 0 0 0 0 
+0 0 0 0 0 0 
+3 
+0 0 0 0 0 0 
+0 0 0 1 0 0 
+0 1 0 0 1 0 
+0 1 0 0 1 0 
+0 0 1 0 0 0 
+0 0 0 0 0 0 
+4 
+0 0 0 0 0 0 
+0 0 0 0 0 0 
+0 0 1 1 1 0 
+0 1 1 1 0 0 
+0 0 0 0 0 0 
+0 0 0 0 0 0 
+.....
+.....
+
+Until now, the basic functionality has been implemented, including the comparison of array sizes
+
+In fact, I also designed some nlbs with syntax errors. 
+Since running such files will pop up errors, I named these error nlab files .enlb
+
+In notallowa.enlb, it should pop up errors with "expecting instruction"
+In notallowb.enlb, it should pop up errors with "adort dump" which is happend in polishlist
+In notallowc.enlb, it should pop up error with "$.. and $.. are not the same size"
+In notallowd.enlb, it should pop up error with "happend in polishlist", Because it may miss the ';' 

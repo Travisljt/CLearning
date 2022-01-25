@@ -1,0 +1,18 @@
+For the extension.c, I just add some interesting thing to enhence the visual effects.
+
+I have add A direction in struct roller
+
+struct roller
+{
+    char arr[MAX][MAX];
+    int row;
+    int col;
+    int flag;
+    int parent;
+    int direction; <-
+};
+typedef struct roller roller;
+
+Each time it is judged that the board is not a duplicate, mark it as the result obtained by the parent board in one direction (up, down, left, and right)
+
+Then through "more" command to print out more details

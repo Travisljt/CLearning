@@ -1,0 +1,6 @@
+# It's miss the "}" in the end
+BEGIN {
+    SET $A := 5 ;
+    LOOP $I 10 {
+    SET $B := $A 2 B-ADD ;
+}

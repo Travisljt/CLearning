@@ -1,0 +1,7 @@
+BEGIN {
+   READ "lblock.arr" $A 
+   ONES 4 4 $B 
+   SET $A := $A $B B-ADD ;
+   PRINT "ARRAY:"
+   PRINT $A
+}
